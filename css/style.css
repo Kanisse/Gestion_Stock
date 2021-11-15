@@ -20,7 +20,7 @@ table {
   border: 1px solid #ccc;
 align-items: center;
 }
-th{background-color:#655;color:white;border: 1px dashed #ccc;}
+thead{background-color:#655;color:white;border: 1px dashed #ccc;}
 tr:nth-child(odd) {width: 100px; height: 30px;background-color : #AAA; }
 tr:nth-child(even) {width: 100px; height: 30px;background-color : #CCC; } 
 .afficher{background-color:green;}

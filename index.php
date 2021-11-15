@@ -15,12 +15,15 @@ require "connexion.php";
 
 <div class="contain">
   <table>
-    <tr><th>ID</th>
-    <th>Nom de Produit</th>
-    <th>Prix du produit</th><th><th></th><th></th>
-  
-  </tr>
-  <?php
+    <thead>
+    <tr><td>ID</td>
+    <td>Nom de Produit</td>
+    <td>Prix du produit</td><td><td></td><td></td>
+ </tr>
+  </thead>
+ 
+  <tbody>
+ <?php
   $resultat=$db->query("SELECT * FROM produits");
   while($ligne=$resultat->fetch_assoc()){
     echo "<tr>
@@ -34,8 +37,9 @@ require "connexion.php";
     </form>
     </tr>";
   }
-  ?>
-  </table>
+?>
+</tbody>
+</table>
 </div>
 </body>
 </html>
