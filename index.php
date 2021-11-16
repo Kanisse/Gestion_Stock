@@ -31,7 +31,6 @@ require "connexion.php";
     <td>" .$ligne["Id_Produit"]. "</td>
     <td>" .$ligne["Nom_Produit"]. "</td>
     <td>" .$ligne["Prix_Produit"]. "</td>";
- 
     echo "<td><a href='traitement.php?id=" . $ligne["Id_Produit"] . "' class='afficher'>
     Afficher</a></td></tr>";  
  
@@ -43,7 +42,7 @@ require "connexion.php";
 </table>
 </div>
 
-<a href="Resultat.php?id=1">Cliquer ici</a>
+<b>Bonjour<b>
 </body>
 </html>
 
