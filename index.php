@@ -54,8 +54,3 @@ if(isset($_SESSION) && $_SESSION['user']=="Admin"){
 
 </body>
 </html>
-
-<?php
-
-
-?>
