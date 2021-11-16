@@ -42,7 +42,6 @@ require "connexion.php";
 </table>
 </div>
 
-<b>Bonjour<b>
 </body>
 </html>
 
