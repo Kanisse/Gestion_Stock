@@ -1,5 +1,6 @@
 
 body{
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 background-color:#AAA;
 width: 80%;
 margin: auto;
@@ -16,11 +17,13 @@ padding: 100px 50px;
   text-align: center;
 }
 table {
-  background-color:lightgreen;
   border: 1px solid #ccc;
-align-items: center;
+ text-align: center;
 }
-thead{background-color:#655;color:white;border: 1px dashed #ccc;}
+
+a {padding: 2px 1px; color: azure; display: inline-block}
+a:hover{background-color: black;color: white;}
+thead{background-color:#654;color:white;border: 1px dashed #ccc;}
 tr:nth-child(odd) {width: 100px; height: 30px;background-color : #AAA; }
 tr:nth-child(even) {width: 100px; height: 30px;background-color : #CCC; } 
 .afficher{background-color:green;}

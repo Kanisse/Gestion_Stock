@@ -27,20 +27,27 @@ require "connexion.php";
   $resultat=$db->query("SELECT * FROM produits");
   while($ligne=$resultat->fetch_assoc()){
     echo "<tr>
+
     <td>" .$ligne["Id_Produit"]. "</td>
     <td>" .$ligne["Nom_Produit"]. "</td>
-    <td>" .$ligne["Prix_Produit"]. "</td>
-    <form action='' method='post'>
-    <td><input type='submit' class='afficher' value='Afficher'> </td>
-    <td><input type='submit' class='supprimer' value='Supprimer'></td>
-    <td><input type='submit' class='modifier' value='Modifier'></td>
-    </form>
-    </tr>";
+    <td>" .$ligne["Prix_Produit"]. "</td>";
+ 
+    echo "<td><a href='traitement.php?id=" . $ligne["Id_Produit"] . "' class='afficher'>
+    Afficher</a></td></tr>";  
+ 
   }
 ?>
+
+
 </tbody>
 </table>
 </div>
+
+<a href="Resultat.php?id=1">Cliquer ici</a>
 </body>
 </html>
 
+<?php
+
+
+?>
