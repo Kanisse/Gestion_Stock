@@ -28,6 +28,7 @@ tr:nth-child(odd) {width: 100px; height: 30px;background-color : #AAA; }
 tr:nth-child(even) {width: 100px; height: 30px;background-color : #CCC; } 
 .afficher{background-color:green;}
 .supprimer{background-color: red;}
+.ajouter{background-color:#340;color :blue;}
 .modifier{background-color:cornflowerblue}
 
 input:hover{background-color: black;color: white;}
