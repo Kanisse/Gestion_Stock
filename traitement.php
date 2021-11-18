@@ -1,14 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title></title>
+</head>
+<body>
+  
+</body>
+</html>
+
 <?php
 include "connexion.php";
-//echo "le produit sélectionné est le produit numéro ".$_GET['id']
-
 $id=$_GET['id'];
 
 if($_GET['op']=="Aff"){
-$result=$db->query("SELECT * FROM produits WHERE Id_Produit=$id");
+  $result=$db->query("SELECT * FROM produits WHERE Id_Produit=$id");
 while($ligne=$result->fetch_assoc()){
-  echo "Le nom du produit sélectionné est ".$ligne['Nom_Produit'];
-  echo "<br> Le prix du produit sélectionné est ".$ligne['Prix_Produit'];
+?>
+  <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="">
+  <div class="card-body">
+    <h5 class="card-title"><?php echo $ligne['Nom_Produit'];?></h5>
+    <a href="#" class="btn btn-primary">plus de détails</a>
+  </div>
+</div>
+
+<?php
 }
 }
 else if($_GET['op']=="Supp"){

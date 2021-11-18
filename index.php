@@ -1,61 +1,69 @@
-<?php
-require "connexion.php";
-session_start();
-$_SESSION['user']='Admin';
-?>
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+<style>
+body{
+  background-image: url("images/back.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 
-<div class="contain">
+}
+</style>
+    <title>Signin Template for Bootstrap</title>
 
-<button class="ajouter">Ajouter un produit</button>
-<table>
-    <thead>
-    <tr><td>ID</td>
-    <td>Nom de Produit</td>
-    <td>Prix du produit</td><td><td></td><td></td>
- </tr>
-  </thead>
- 
-  <tbody>
- <?php
-  $resultat=$db->query("SELECT * FROM produits");
-  while($ligne=$resultat->fetch_assoc()){
-    echo "<tr>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
 
-    <td>" .$ligne["Id_Produit"]. "</td>
-    <td>" .$ligne["Nom_Produit"]. "</td>
-    <td>" .$ligne["Prix_Produit"]. "</td>";
-if(isset($_SESSION) && $_SESSION['user']=="Admin"){
-    echo "<td><a href='traitement.php?op=Aff&id=" . $ligne["Id_Produit"] . "' class='afficher'>
-    Afficher</a></td>";
-    echo "<td><a href='traitement.php?op=Supp&id=" . $ligne["Id_Produit"] . "' class='supprimer'>
-    Supprimer</a></td>";
-    echo "<td><a href='traitement.php?op=Modif&id=" . $ligne["Id_Produit"] . "' class='modifier'>
-    Modifier</a></td>";
-  }
-  echo  "</tr>";  
-  }
-?>
+  <body>
 
 
-</tbody>
-</table>
+  <div class="container">
+
+
+  <div class="d-flex justify-content-center h-100">
+		<div class="card">
+			<div class="card-header">
+				<h3>Sign In</h3>
+				<div class="d-flex justify-content-end social_icon">
+				</div>
+			</div>
+			<div class="card-body">
+				<form>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+						</div>
+						<input type="text" class="form-control" placeholder="username">						
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+						</div>
+						<input type="password" class="form-control" placeholder="password">
+					</div>
+					<div class="row align-items-center remember">
+						<input type="checkbox">Remember Me
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Login" class="btn float-right login_btn">
+					</div>
+				</form>
+			</div>
+			<div class="card-footer">
+				<div class="d-flex justify-content-center links">
+					Don't have an account? <a href="#">Sign Up</a>
+				</div>
+				<div class="d-flex justify-content-center">
+					<a href="#">Forgot your password?</a>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
-</body>
+  </body>
 </html>
-
-<?php
-
-
-?>
