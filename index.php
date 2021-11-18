@@ -12,6 +12,7 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
 
+<<<<<<< HEAD
 }
 </style>
     <title>Signin Template for Bootstrap</title>
@@ -66,4 +67,7 @@ body{
 </div>
 
   </body>
+=======
+</body>
+>>>>>>> 5a9396483a8a39605ccb5d8b6e4b01135f960da6
 </html>
