@@ -21,7 +21,7 @@ if($_GET['op']=="Aff"){
 while($ligne=$result->fetch_assoc()){
 ?>
   <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="..." alt="">
+  <img class="card-img-top" src="images/<?php echo $ligne['Photo_Produit'];?>" alt="">
   <div class="card-body">
     <h5 class="card-title"><?php echo $ligne['Nom_Produit'];?></h5>
     <a href="#" class="btn btn-primary">plus de détails</a>

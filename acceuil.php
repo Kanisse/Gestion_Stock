@@ -1,7 +1,6 @@
 <?php
 require "connexion.php";
 session_start();
-$_SESSION['user']='Admin';
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +15,11 @@ $_SESSION['user']='Admin';
 <body>
 
 <div class="container">
+<div class="row float-right">
+<?php echo "<h3>Bienvenue ".$_SESSION['login']."</h3>"?>
+</div>
 <div class="row">
+
 <div class="col-lg-3">
 <button class="btn btn-success">Ajouter un produit</button>
 </div>
@@ -28,11 +31,9 @@ $_SESSION['user']='Admin';
     <td>Nom de Produit</td>
     <td>Prix du produit</td><td><td></td><td></td>
  </tr>
-  </thead>
- 
+  </thead> 
   <tbody> 
  <?php
-
   //define total number of results you want per page  
   $results_per_page = 5;  
   //find the total number of results stored in the database  
